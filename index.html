@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <link rel="shortcut icon" href="./icon/webview.png" type="image/x-icon">
+    <title>Simple WebView</title>
+</head>
+<body class="d-flex h-100 justify-content-center align-items-center"> 
+   
+    <div style="margin-top: 180px;" class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <div class="form-group">
+                <label>Qual site deseja navegar?</label><br>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="form-group">
+                <input type="text" class="website form-control"><br>
+            </div>
+        </div>
+        
+        <div class="col-12 w-100 h-100 d-flex justify-content-center align-items-center">
+            <button onClick="navegar()" class="btn btn-primary w-50">
+                Navegar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function navegar(){
+            window.$ = window.jQuery = require('jquery');
+            var url = $(".website").val();
+
+            if(url === ''){
+                alert("Digite um site válido");
+            }
+
+            else{
+                var finalURL = 'http://' + url;
+                window.location.href = finalURL;
+            }
+        }
+
+    </script>
+</body>
+</html>

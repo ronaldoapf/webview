@@ -1,0 +1,43 @@
+{
+  "name": "webview",
+  "version": "1.0.0",
+  "description": "Webview to use with vscode",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:windows": "electron-builder --windows",
+    "dist:linux": "electron-builder --linux"
+  },
+  "build": {
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "category": "Utility",
+      "icon": "webview.png",
+      "target": [
+        "deb"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronaldoapf/webview.git"
+  },
+  "author": "Ronaldo Alves <ronaldo.alves.1997@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronaldoapf/webview/issues"
+  },
+  "homepage": "https://github.com/ronaldoapf/webview#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "electron": "^9.0.0",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.6.1",
+    "electron-packager": "^14.2.1"
+  }
+}
