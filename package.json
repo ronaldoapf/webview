@@ -33,7 +33,7 @@
   "homepage": "https://github.com/ronaldoapf/webview#readme",
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "electron": "^9.0.0",
+    "electron": "^9.3.1",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
